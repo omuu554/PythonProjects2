@@ -1,6 +1,6 @@
-Num = input("Please enter number one: ")
-Num2 = input("Please enter number two: ")
-Num3 = input("Please enter number three: ")
+Num1 = int(input("Please enter number one: "))
+Num2 = int(input("Please enter number two: "))
+Num3 = int(input("Please enter number three: "))
 
 def MaxNum(x, y, z) :
    if(x > y and x > z) :
@@ -10,5 +10,5 @@ def MaxNum(x, y, z) :
    else :
        return z
 
-print(MaxNum(77,12,9))
+print(MaxNum(Num1,Num2,Num3))
 
