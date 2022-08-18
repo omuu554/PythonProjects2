@@ -60,8 +60,11 @@ def FixIfIncorrect(UserNum , ComputerNum, UserAnswer) :
             return True
 
 
+def RaiseExe(UserNum) :
+    if(UserNum < 0 or UserNum > 100) :
+        raise ValueError("You did not give a valid number")
 
-
+RaiseExe(UserNum)
 UserAnswer = IsAnswerGood(UserAnswer)
 def CheckComputerAnswer(UserNum,ComputerNum,UserAnswer,MaxRange,MinRange,ComputerGuess) :
     while(IsUserAndNumberEqual(UserNum, ComputerNum,UserAnswer)) :
