@@ -1,23 +1,18 @@
-NumAmount = int(input("How much numbers do you want to be created in fibunachis Series: "))
-LastNum = 0
-CurrentNum = 1
-NextNum = LastNum + CurrentNum
+INPUT = input("Just Choose Something: ")
+class Error() :
+    def __init__(self,Health):
+        self.Health = int(Health)
 
-if NumAmount <= 0 :
-   raise ValueError("THE NUMBER IS NOT BIGGER THAN 0")
+    def main(self,Health):
+       try :
+           self.Health = int(Health)
+       except:
+           raise Exception("Please enter a number")
+       finally:
+           print("End Of Porgram")
 
-else :
 
-   for i in range(NumAmount) :
-       if i <= 1 :
-           print(f"{i},", end= '')
-       else :
-           if i != NumAmount -1:
-              print(f"{NextNum}," , end= '')
-           else :
-               print(f"{NextNum}")
-           LastNum = CurrentNum
-           CurrentNum = NextNum
+boss = Error("12")
+boss.main(INPUT)
 
-       NextNum =   LastNum +  CurrentNum
 
