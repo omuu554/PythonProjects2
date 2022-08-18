@@ -9,6 +9,7 @@ CountGuesses = 0
 for i in range(len(ComputerString)-1):
     RevealWord = RevealWord+"_"
 
+print(ComputerString)
 print("Please Guess the word:")
 print(RevealWord)
 
