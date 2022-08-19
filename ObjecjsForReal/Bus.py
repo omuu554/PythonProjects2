@@ -45,9 +45,9 @@ class Bus:
         while (not PassangerName.isalpha()):
             PassangerName = input("Please enter a correct name: ")
         for Seats in range(len(self.ListOfSeats)) :
-            if(self.ListOfSeats[Seats] == PassangerName) :
+            if(self.ListOfSeats[Seats].lower() == PassangerName.lower()) :
                 self.ListOfSeats[Seats] = "Free"
-                self.__SetPassangers(self.Passangers + 1)
+                self.__SetPassangers(self.Passangers - 1)
                 break
         else :
             print(f"The passanger {PassangerName} was not found on the bus")
