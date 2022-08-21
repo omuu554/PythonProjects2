@@ -1,9 +1,16 @@
 String = input("Please enter a string : ")
 NewString = ""
 
-for i in range(len(String)) :
-    if(String[i] not in NewString) :
-        NewString = NewString + String[i]
+
+
+for Char in String :
+    if(Char not in NewString) :
+        NewString = NewString + Char
+
+
+"""for Char in String:
+    if(NewString.count(Char) != 2) :
+        NewString = NewString + Char + Char"""
 
 
 print(NewString)

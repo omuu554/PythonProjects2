@@ -7,8 +7,11 @@ def CheckString(String):
     return String
 
 String = CheckString(String)
-#String =String.replace('a' , '')
-#String = String.replace('A', '')
+
+
+String =String.replace('a' , '')
+String = String.replace('A', '')
+print(String)
 
 for Char in range(len(String)):
     if(Char == len(String) - 1):

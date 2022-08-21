@@ -16,6 +16,7 @@ def CheckChar(Char) :
 String = CheckString(String)
 Char = CheckChar(Char)
 
+
 for char in range(len(String) - 1) :
     if(Char.lower() == String[char].lower()) :
         print(char)

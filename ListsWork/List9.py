@@ -8,7 +8,7 @@ for i in range(10) :
     Num = random.randint(1,10)
     List.append(Num)
 
-NewList = List[0::2]
+NewList = List[6::-1]
 NewList.append(NumUser)
 print(List)
 print(NewList)
