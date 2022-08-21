@@ -9,6 +9,9 @@ def CheckChar(Char) :
 
 Char = CheckChar(Char)
 
+
+
+
 for i in range(len(SequenceString)) :
     if(Char == SequenceString[i]) :
         SequenceString = SequenceString[:i] + SequenceString[i].capitalize() + SequenceString[i+1:]
