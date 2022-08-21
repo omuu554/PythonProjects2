@@ -1,6 +1,5 @@
 String = input("Please enter a string : ")
 
-if(String[0].isupper()):
-    print("Its Capitalzie")
-else :
-    print("Its lower case")
+String = String[0].upper() + String[1:]
+
+print(String)
