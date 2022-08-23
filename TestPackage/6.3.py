@@ -33,18 +33,12 @@ while(len(ListChildrenAge) != int(AmountOfChildren) ) :
       ListChildrenAge = re.split(',| ,|, | ', ChildrenAge)
 
 
+
 for Ages in range(len(ListChildrenAge)) :
     while(ListChildrenAge[Ages] == "" or int(ListChildrenAge[Ages]) < 0 or ListChildrenAge[Ages].isnumeric() == False) :
         ListChildrenAge[Ages] = input("Please enter a CORRECT AGE: ")
 
+ListAfterTuple = ListAfterTuple + (Name,) + (PhoneNumber,) + (Age,) + (AmountOfChildren,) + (ListChildrenAge,)
 
-
-ListBeforeTuple.append(Name)
-ListBeforeTuple.append(PhoneNumber)
-ListBeforeTuple.append(Age)
-ListBeforeTuple.append(AmountOfChildren)
-ListBeforeTuple.append(ChildrenAge)
-
-ListAfterTuple = tuple(ListBeforeTuple)
 print(ListAfterTuple)
 print(f"His name is {ListAfterTuple[0]} and he is {ListAfterTuple[2]} years old\nHis phone number is {ListAfterTuple[1]}\nHe has {ListAfterTuple[3]} children and they are ages {ListAfterTuple[4]}")

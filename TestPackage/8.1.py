@@ -56,7 +56,10 @@ print(Set3)
 Set1 = list(Set1)
 if(len(Set1) > 0) :
  Set1.pop(0)
-Set1 =sorted(set(Set1) , key= Set1.index)
+Set1 =set(sorted(set(Set1) , key= Set1.index))
+
+
+print(Set1)
 
 for Elements in Set3 :
     MaxNum = max(Elements, MaxNum)
