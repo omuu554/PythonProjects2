@@ -13,10 +13,16 @@ while(KeyName != "") :
 
 print(DicTests)
 
-for Key, Value in DicTests.items() :
+"""for Key, Value in DicTests.items() :
     if Value not in NewDicTests :
         NewDicTests[Value] = [Key]
     else :
-        NewDicTests[Value].append(Key)
+        NewDicTests[Value].append(Key)"""
+
+for Keys in DicTests.keys():
+    if(DicTests[Keys] not in NewDicTests):
+        NewDicTests[DicTests[Keys]] = Keys
+    else :
+        NewDicTests[DicTests[Keys]] += " ,"+ Keys
 
 print(NewDicTests)

@@ -9,11 +9,12 @@ CountGuesses = 0
 for i in range(len(ComputerString)-1):
     RevealWord = RevealWord+"_"
 
+
 print("Please Guess the word:")
 print(RevealWord)
 
 def FixUserGuess(UserGuess) :
-    while (len(UserGuess) > 1 or UserGuess == "" or not UserGuess.isalpha()):
+    while (UserGuess == "" or not UserGuess.isalpha()):
         UserGuess = input("Please guess a char: ")
 
     return UserGuess
@@ -25,13 +26,23 @@ while(CountGuesses != 8) :
         break
 
     UserGuess = FixUserGuess(UserGuess)
-    for i in range(len(ComputerString)) :
-        if(UserGuess == ComputerString[i].lower()):
-            RevealWord = RevealWord[:i] + ComputerString[i] + RevealWord[i+1:]
+    if(len(UserGuess) == 1):
+     for i in range(len(ComputerString)) :
+         if(UserGuess.lower() == ComputerString[i].lower()):
+             RevealWord = RevealWord[:i] + ComputerString[i] + RevealWord[i+1:]
+    else :
+        if(UserGuess.lower() == ComputerString.lower()):
+            RevealWord = ComputerString
+
+
 
     print(f"The word is now {RevealWord}")
     CountGuesses += 1
     UserGuess = ""
+    if (RevealWord == ComputerString):
+        print(f"Congrats you found the word {ComputerString}!!!")
+        break
+
 else :
     print(f"You have failed to find the word {ComputerString} :(")
 
