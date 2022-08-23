@@ -16,7 +16,6 @@ for Numbers in range(UserAbsNum) :
    DicSlot = {NumModified: NumModified * NumModified}
    DicNum.update(DicSlot)
 
-for SumNum in DicNum.values() :
-    SumOfValue += SumNum
+SumOfValue = sum(DicNum.values())
 
 print(f"The sum of all the values is: {SumOfValue}")

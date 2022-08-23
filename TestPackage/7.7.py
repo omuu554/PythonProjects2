@@ -16,6 +16,7 @@ for Numbers in range(UserAbsNum) :
    DicSlot = {NumModified: NumModified * NumModified}
    DicNum.update(DicSlot)
 
+
 DicNum.pop(UserKeyFind)
 """for KeyNumbers,ValueNumbers in DicNum.items() :
     if(UserKeyFind != KeyNumbers) :

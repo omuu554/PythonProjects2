@@ -23,6 +23,6 @@ for Keys in DicTests.keys():
     if(DicTests[Keys] not in NewDicTests):
         NewDicTests[DicTests[Keys]] = Keys
     else :
-        NewDicTests[DicTests[Keys]] += " ,"+ Keys
+        NewDicTests[DicTests[Keys]] += ","+ Keys
 
 print(NewDicTests)
