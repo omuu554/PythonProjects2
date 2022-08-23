@@ -34,12 +34,15 @@ while(CountGuesses != 8) :
         if(UserGuess.lower() == ComputerString.lower()):
             RevealWord = ComputerString
 
+
+
     print(f"The word is now {RevealWord}")
     CountGuesses += 1
     UserGuess = ""
     if (RevealWord == ComputerString):
         print(f"Congrats you found the word {ComputerString}!!!")
         break
+
 else :
     print(f"You have failed to find the word {ComputerString} :(")
 

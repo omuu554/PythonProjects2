@@ -8,7 +8,7 @@ def CheckString(String):
     return String
 
 def CheckChar(Char) :
-    while(len(Char) != 1) :
+    while(len(Char) != 1 or not Char.isalpha()) :
         Char = input("Please enter a character : ")
 
     return Char
@@ -17,7 +17,7 @@ String = CheckString(String)
 Char = CheckChar(Char)
 
 
-for char in range(len(String) - 1) :
+for char in range(len(String)) :
     if(Char.lower() == String[char].lower()) :
         print(char)
         break
