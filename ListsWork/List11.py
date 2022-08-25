@@ -1,4 +1,4 @@
-import random
+
 
 List = [1,1]
 
