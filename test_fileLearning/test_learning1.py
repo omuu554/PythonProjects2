@@ -29,7 +29,7 @@ def test1(): # function1
 def test2(): # function2
     print("Executing test2!")
     assert True"""
-
+import unittest
 
 """class TestClass:
     @classmethod
@@ -62,5 +62,38 @@ def test2(): # function2
 
     def test2(self):  # function2
         print("Executing test2!")
-        assert True 
-        """
+        assert True"""
+
+"""class TestClass(unittest.TestCase): // unitestExample
+    @classmethod
+    def setUpClass(cls): # class setup
+        print("Setup TestClass!")
+
+    @classmethod
+    def tearDownClass(cls):  # class teardown
+        print("teardown TestClass!")
+
+    def setUp(self):  # method setup
+        if self.test1:
+            print("\nSetting up test1")
+        elif self.test2:
+            print("\nSetting up test2")
+        else:
+            print("\nSetting up unknown test")
+
+    def tearDown(self):  # method teardown
+        if self.test1:
+            print("\nTearing down test1")
+        elif self.test2:
+            print("\nTearing down test2")
+        else:
+            print("\nTearing down test")
+
+    def test1(self):  # function1
+        print("Executing test1!")
+        assert True
+
+    def test2(self):  # function2
+        print("Executing test2!")
+        assert True"""
+
